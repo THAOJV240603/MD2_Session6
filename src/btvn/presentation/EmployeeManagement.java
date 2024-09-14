@@ -54,6 +54,55 @@ public class EmployeeManagement {
                     }
                     break;
                 case 4:
+                    //Tìm kiếm
+                    //Khai báo 1 biến keyword
+                    //Nhập giá trị cho biến keyword
+                    //Chạy vòng lặp kiểm tra (tương đối) list[i].getName().contains == true
+                    //(toLowerCase không phân biệt hoa thường)
+                        //Hiển thị thông tin nhân viên đó
+                    System.out.println("Nhập tên nhân viên cần tìm:");
+                    String key = sc.nextLine();
+                    for (int i = 0; i < n; i++) {
+                        if(list[i].getName().toLowerCase().contains(key.toLowerCase())) {
+                            list[i].displayData();
+                        }else{
+                            System.out.println("Tên nhân viên đã nhập không tồn tại");
+                        }
+                    }
+                    break;
+                case 5:
+                    //Cập nhật
+                    //Khai báo 1 biến id
+                    //Nhập giá trị cho biến id
+                    //Chạy vòng lặp kiểm tra (tuyệt đối) list[i].getId().equals == true
+                        //Nhập lại thông tin nhân viên đó
+                        //Hiển thị lại thông tin
+                    System.out.println("Nhập id nhân viên cần cập nhật:");
+                    String id = sc.nextLine();
+                    for (int i = 0; i < n; i++) {
+                        if(list[i].getId().equals(id)) {
+                            list[i].inputData(sc);
+                            System.out.println("Thông tin nhân viên đã cập nhật:");
+                            list[i].displayData();
+                            break;
+                        }else{
+                            System.out.println("Không tồn tại id");
+                        }
+                    }
+                    break;
+                case 6:
+                    //Xóa nhân viên
+                    //Khai báo 1 biến id
+                    //Nhập giá trị cho biến id
+                    //Chạy vòng lặp kiểm tra (tuyệt đối) list[i].getId().equals == true
+                        //Xóa nhân viên đó
+                    System.out.println("Nhập id nhân viên cần xóa:");
+                    String idDel = sc.nextLine();
+                    for (int i = 0; i < n; i++) {
+                        if(list[i].getId().equals(idDel)) {
+
+                        }
+                    }
                     break;
                 case 9:
                     System.exit(0);

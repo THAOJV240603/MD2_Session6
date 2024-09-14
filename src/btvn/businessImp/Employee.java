@@ -117,6 +117,7 @@ public class Employee implements IEmployee {
         System.out.println("Tình trạng: " + (this.status? "Đang làm viêc" : "Đã nghỉ"));
     }
 
+
     //Phương thức tính lương
     public float calSalary() {
         return (float) (this.rate*BASIC_SALARY+this.commission);

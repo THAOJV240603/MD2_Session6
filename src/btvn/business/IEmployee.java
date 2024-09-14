@@ -10,4 +10,5 @@ public interface IEmployee {
 
     //Phương thức hiển thị thông tin
     public void displayData();
+
 }
