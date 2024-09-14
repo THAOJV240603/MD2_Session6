@@ -98,9 +98,9 @@ public class EmployeeManagement {
                         //Xóa nhân viên đó
                     System.out.println("Nhập id nhân viên cần xóa:");
                     String idDel = sc.nextLine();
-                    for (int i = 0; i < n; i++) {
+                    for (Employee i : list) {
                         if(list[i].getId().equals(idDel)) {
-
+                            list.remove(i);
                         }
                     }
                     break;
